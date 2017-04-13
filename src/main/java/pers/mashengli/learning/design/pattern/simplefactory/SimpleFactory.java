@@ -19,4 +19,18 @@ public class SimpleFactory {
         }
         throw new IllegalArgumentException("不支持的运算");
     }
+
+    public static <T extends Operation> T createOperation(Class<T> tClass) {
+        Operation operation = null;
+        try {
+            operation = (Operation) Class.forName(tClass.getName()).newInstance();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return (T) operation;
+    }
 }

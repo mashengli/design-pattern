@@ -23,5 +23,7 @@ abstract class Operation {
         this.numberB = numberB;
     }
 
-    abstract double getResult() throws IllegalArgumentException;
+    public double getResult() throws IllegalArgumentException {
+        return 0;
+    }
 }

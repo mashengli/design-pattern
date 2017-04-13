@@ -12,7 +12,7 @@ public class Client {
         DecoratorB decoratorB = new DecoratorB(dress1);
         decoratorB.wear();
         Dress dress3 = new Dress("小马1+2");
-        DecoratorA decoratorA1 = new DecoratorA(dress);
+        DecoratorA decoratorA1 = new DecoratorA(dress3);
         decoratorB = new DecoratorB(decoratorA1);
         decoratorB.wear();
     }
